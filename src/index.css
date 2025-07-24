@@ -1,0 +1,334 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gullak Design System - Accessible, Voice-First Savings App
+All colors MUST be HSL for accessibility and theming.
+*/
+
+@layer base {
+  :root {
+    /* Base colors - High contrast for accessibility */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    /* Card system */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    /* Popover system */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Primary - Trustworthy blue for savings */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 217 91% 70%;
+    --primary-dark: 217 91% 50%;
+
+    /* Secondary - Light blue for accents */
+    --secondary: 217 91% 80%;
+    --secondary-foreground: 217 91% 20%;
+    --secondary-light: 217 91% 90%;
+    --secondary-dark: 217 91% 70%;
+
+    /* Muted colors for backgrounds */
+    --muted: 217 20% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* Accent - Light blue for highlights */
+    --accent: 217 50% 88%;
+    --accent-foreground: 217 91% 25%;
+
+    /* Success - Blue for goals achieved */
+    --success: 217 91% 60%;
+    --success-foreground: 0 0% 98%;
+
+    /* Warning - Amber for alerts */
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 98%;
+
+    /* Destructive - Red for errors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Interactive elements */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 217 91% 60%;
+
+    /* Gradients for beautiful backgrounds */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 91% 80%), hsl(217 91% 90%));
+    --gradient-success: linear-gradient(135deg, hsl(217 91% 60%), hsl(200 91% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 50%), hsl(217 91% 80%));
+
+    /* Shadows for depth */
+    --shadow-soft: 0 2px 10px hsl(217 91% 60% / 0.1);
+    --shadow-medium: 0 4px 20px hsl(217 91% 60% / 0.15);
+    --shadow-large: 0 8px 30px hsl(217 91% 60% / 0.2);
+
+    /* Voice interaction indicators */
+    --voice-active: 217 91% 65%;
+    --voice-listening: 217 91% 70%;
+    --voice-processing: 45 93% 47%;
+
+    /* Component spacing */
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode - maintains accessibility contrast */
+    --background: 217 20% 8%;
+    --foreground: 217 30% 95%;
+
+    --card: 217 20% 10%;
+    --card-foreground: 217 30% 95%;
+
+    --popover: 217 20% 10%;
+    --popover-foreground: 217 30% 95%;
+
+    --primary: 217 91% 65%;
+    --primary-foreground: 217 20% 8%;
+    --primary-light: 217 91% 75%;
+    --primary-dark: 217 91% 55%;
+
+    --secondary: 217 91% 80%;
+    --secondary-foreground: 217 20% 8%;
+    --secondary-light: 217 91% 90%;
+    --secondary-dark: 217 91% 70%;
+
+    --muted: 217 20% 15%;
+    --muted-foreground: 217 15% 65%;
+
+    --accent: 217 20% 20%;
+    --accent-foreground: 217 91% 65%;
+
+    --success: 217 91% 65%;
+    --success-foreground: 217 20% 8%;
+
+    --warning: 45 93% 60%;
+    --warning-foreground: 217 20% 8%;
+
+    --destructive: 0 84.2% 70%;
+    --destructive-foreground: 217 20% 8%;
+
+    --border: 217 20% 20%;
+    --input: 217 20% 20%;
+    --ring: 217 91% 65%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 65%), hsl(217 91% 75%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 91% 80%), hsl(217 91% 90%));
+    --gradient-success: linear-gradient(135deg, hsl(217 91% 65%), hsl(200 91% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 65%), hsl(217 91% 55%), hsl(217 91% 80%));
+
+    --shadow-soft: 0 2px 10px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 20px hsl(0 0% 0% / 0.4);
+    --shadow-large: 0 8px 30px hsl(0 0% 0% / 0.5);
+
+    --voice-active: 217 91% 75%;
+    --voice-listening: 217 91% 80%;
+    --voice-processing: 45 93% 60%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* High contrast focus indicators for accessibility */
+  *:focus-visible {
+    @apply ring-2 ring-ring ring-offset-2 ring-offset-background outline-none;
+  }
+
+  /* Voice interaction animations */
+  .voice-pulse {
+    animation: voice-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .voice-listening {
+    animation: voice-listening 1.5s ease-in-out infinite;
+  }
+
+  /* Smooth transitions for better UX */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Accessibility helpers */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+@layer components {
+  /* Voice interaction indicators */
+  .voice-indicator {
+    @apply relative;
+  }
+
+  .voice-indicator::after {
+    content: '';
+    @apply absolute -inset-1 rounded-full opacity-75 blur-sm;
+    background: linear-gradient(to right, hsl(var(--voice-active)), hsl(var(--voice-listening)));
+    animation: voice-glow 2s ease-in-out infinite alternate;
+  }
+
+  /* Savings progress animations */
+  .savings-growth {
+    animation: savings-grow 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Chat animation */
+  .animate-scale-in {
+    animation: scale-in 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Button enhancements */
+  .btn-primary {
+    @apply text-primary-foreground shadow-soft hover:shadow-medium transition-all duration-300;
+    background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--primary-light)));
+  }
+
+  .btn-secondary {
+    @apply text-secondary-foreground shadow-soft hover:shadow-medium transition-all duration-300;
+    background: linear-gradient(to right, hsl(var(--secondary)), hsl(var(--secondary-light)));
+  }
+
+  .btn-voice {
+    @apply relative overflow-hidden text-white shadow-soft hover:shadow-medium transition-all duration-300;
+    background: linear-gradient(to right, hsl(var(--voice-active)), hsl(var(--voice-listening)));
+  }
+
+  /* Card styles */
+  .savings-card {
+    @apply bg-card border border-border rounded-lg shadow-soft hover:shadow-medium transition-all duration-300 p-6;
+  }
+
+  .goal-card {
+    @apply border border-border rounded-lg shadow-soft hover:shadow-medium transition-all duration-300 p-6;
+    background: linear-gradient(to bottom right, hsl(var(--accent)), hsl(var(--accent) / 0.5));
+  }
+
+  /* Ensure buttons are clickable */
+  .btn-primary, .btn-secondary, button {
+    @apply cursor-pointer;
+    pointer-events: auto !important;
+  }
+
+  /* Fix any overlay issues */
+  .hover-explainer {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hover-explainer button {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@keyframes voice-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes voice-listening {
+  0%, 100% {
+    box-shadow: 0 0 0 0 hsl(var(--voice-listening) / 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px hsl(var(--voice-listening) / 0);
+  }
+}
+
+@keyframes voice-glow {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes savings-grow {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes chatBotPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.05) rotate(-2deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.05) rotate(2deg);
+  }
+}
