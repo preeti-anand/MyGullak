@@ -102,7 +102,110 @@ const LoginPage: React.FC = () => {
         guideText={t('audio.loginGuide')}
       />
 
-      <Card className="w-full max-w-md shadow-large border-0 bg-card/95 backdrop-blur-sm">
+      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        {/* Educational Section - Left Side */}
+        <div className="space-y-6">
+          <div className="text-center lg:text-left">
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+              Come! Let's know about My Gullak
+            </h1>
+            <p className="text-xl text-primary-foreground/90 mb-6">
+              Your intelligent, voice-enabled savings companion for building a secure financial future
+            </p>
+          </div>
+
+          {/* Supporting Image */}
+          <div className="flex justify-center lg:justify-start mb-6">
+            <img 
+              src="/src/assets/gullak_img3.png" 
+              alt="Gullak App Features" 
+              className="w-64 h-64 object-contain rounded-lg shadow-soft"
+            />
+          </div>
+
+          {/* App Features */}
+          <div className="space-y-4">
+            <h2 className="text-2xl font-semibold text-white mb-4">Key Features</h2>
+            
+            <div className="space-y-3">
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-white text-sm">🎯</span>
+                </div>
+                <div>
+                  <h3 className="font-medium text-white">Goal-Based Savings</h3>
+                  <p className="text-primary-foreground/80 text-sm">Set specific savings goals and track your progress with visual indicators</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-white text-sm">🎤</span>
+                </div>
+                <div>
+                  <h3 className="font-medium text-white">Voice Commands</h3>
+                  <p className="text-primary-foreground/80 text-sm">Navigate the app hands-free with multilingual voice support</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-white text-sm">🛒</span>
+                </div>
+                <div>
+                  <h3 className="font-medium text-white">Smart Shopping Savings</h3>
+                  <p className="text-primary-foreground/80 text-sm">Round up your purchases and automatically save the difference</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-white text-sm">🎁</span>
+                </div>
+                <div>
+                  <h3 className="font-medium text-white">Reward System</h3>
+                  <p className="text-primary-foreground/80 text-sm">Earn points for consistent saving and achieve milestones</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-white text-sm">🌍</span>
+                </div>
+                <div>
+                  <h3 className="font-medium text-white">Multilingual Support</h3>
+                  <p className="text-primary-foreground/80 text-sm">Available in English, Hindi, Marathi, Spanish, and German</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-white text-sm">🔒</span>
+                </div>
+                <div>
+                  <h3 className="font-medium text-white">Bank-Grade Security</h3>
+                  <p className="text-primary-foreground/80 text-sm">Your data is protected with advanced encryption and secure authentication</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Usage Benefits */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mt-6">
+            <h3 className="text-lg font-semibold text-white mb-3">Why Choose Gullak?</h3>
+            <ul className="space-y-2 text-primary-foreground/90 text-sm">
+              <li>• Build systematic saving habits with goal tracking</li>
+              <li>• Earn interest on your savings with tier-based rewards</li>
+              <li>• Access investment opportunities when goals are completed</li>
+              <li>• Get personalized financial advice through AI chatbot</li>
+              <li>• Enjoy seamless UPI integration for easy transactions</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Login Section - Right Side */}
+        <div className="flex justify-center lg:justify-end">
+          <Card className="w-full max-w-md shadow-large border-0 bg-card/95 backdrop-blur-sm">
         <CardHeader className="text-center space-y-4">
           <div className="flex justify-center">
             <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center shadow-soft">
@@ -216,6 +319,8 @@ const LoginPage: React.FC = () => {
           </div>
         </CardContent>
       </Card>
+        </div>
+      </div>
 
       {/* ChatBot */}
       <ChatBot isLoggedIn={false} />
